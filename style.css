@@ -1,0 +1,320 @@
+/* Globální reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; /* Plynulý posun na kliknutí "Back to top" */
+}
+
+body {
+    background-color: #efefef;
+    color: #000000;
+    /* Postupná hierarchie fontù s prioritou pro Helveticu */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.25;
+    padding: 20px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Obalový prvek */
+.wrapper {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Fixní navigace "Back to Top" — v pravém dolním rohu */
+.header-nav {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+    /* Fixní navigace — výchozí pozice je v pravém dolním rohu (pro Back to Top) */
+.header-nav {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+/* SPECIÁLNÍ TØÍDA PRO HOME — posune ho do pravého horního rohu */
+.header-nav.nav-top {
+    bottom: auto;
+    top: 20px;
+}
+
+    /* Všechny vlastnosti tlaèítek a hover efekt zùstávají spoleèné */
+    .header-nav a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 22px;
+        border: 1px solid #000000;
+        border-radius: 50%;
+        color: #000000;
+        text-decoration: none;
+        font-size: 1.2rem;
+        white-space: nowrap;
+        background-color: #efefef;
+        transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+        .header-nav a:hover {
+            background-color: #000000;
+            color: #ffffff;
+            text-decoration: none;
+        }
+
+/* Èerná dìlící èára mezi projekty */
+.grid-line {
+    border: none;
+    border-top: 1px solid #000000;
+    margin: 15px 0;
+}
+
+/* Møížkový systém (Grid / Flexbox) */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+/* Spoleèný základ pro sloupce */
+.col-3, .col-6, .col-9 {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 20px;
+}
+
+/* Šíøky sloupcù (Základ pro desktop) */
+.col-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.col-9 {
+    flex: 0 0 75%;
+    max-width: 75%;
+}
+
+/* Úvodní BIO sekce */
+.bio-row {
+    padding-top: 20px;
+    margin-bottom: 40px;
+}
+
+.bio-text {
+    font-size: 1.5rem !important;
+    line-height: 1.3;
+    margin-bottom: 25px;
+}
+
+/* Stylování oválných odkazù v BIO sekci */
+.bio-links {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+    .bio-links a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 22px;
+        border: 1px solid #000000;
+        border-radius: 50%; /* Vytvoøí elipsu */
+        color: #000000;
+        text-decoration: none;
+        font-size: 1.2rem;
+        white-space: nowrap;
+        transition: background-color 0.15s ease, color 0.15s ease;
+    }
+
+        .bio-links a:hover {
+            background-color: #000000;
+            color: #ffffff;
+        }
+
+.inline-gif {
+    height: 35px;
+    width: auto;
+    margin-left: 10px;
+}
+
+/* Stylování textù v popiscích projektù */
+.description h1 {
+    font-size: 1.4rem;
+    font-weight: normal;
+    margin-bottom: 8px;
+    text-transform: none;
+}
+
+.description p {
+    font-size: 1.2rem;
+    color: #000000;
+}
+
+.project-meta {
+    color: #000000;
+}
+
+.project-status {
+    font-size: 1rem !important;
+}
+
+/* Speciální tøída pro patkové kurzivní písmo */
+.serif-italic {
+    font-family: Georgia, serif;
+    font-style: italic;
+}
+
+/* Odkazy uvnitø velkých projektù */
+.project-link {
+    color: #000000;
+    font-size: 1.1rem;
+}
+
+/* DYNAMICKÉ OBRÁZKY (UZAMÈENÉ PROPORCE PODLE NÁKRESU) */
+.pics img {
+    width: 100%;
+    height: auto; /* Výška se dopoèítává dynamicky dle pomìru stran */
+    object-fit: cover; /* Èistý oøez bez deformace */
+    display: block;
+}
+
+/* Proporce pro 3 fotky vedle sebe (nebo užší fotku u verze se 2 fotkami) */
+.col-3.pics img {
+    aspect-ratio: 938 / 1080;
+}
+
+/* Proporce pro širší fotku u verze se 2 fotkami */
+.col-6.pics img {
+    aspect-ratio: 1912 / 1080;
+}
+
+/* Proporce pro 1 obøí panoramatickou fotku */
+.col-9.pics img {
+    aspect-ratio: 2894 / 1080;
+}
+
+/* --- ARCHIVNÍ SEKCE (KOMPAKTNÍ SEZNAM) --- */
+
+/* Øádek v archivu */
+.archive-row {
+    align-items: center;
+    margin-bottom: 0;
+}
+
+/* Název projektu v archivu */
+.archive-meta h2 {
+    font-size: 1.15rem;
+    font-weight: normal;
+    margin-bottom: 2px;
+}
+
+/* Popisky pod názvem v archivu */
+.archive-meta .project-meta {
+    font-size: 1rem;
+    color: #000000;
+}
+
+/* Kontejner pro malé miniatury */
+.archive-pics {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+    /* Sjednocení velikosti pro miniatury v archivu */
+    .archive-pics img {
+        width: 80px; /* Fixní šíøka */
+        height: 55px; /* Fixní výška */
+        object-fit: cover; /* Oøíznutí bez roztažení */
+        display: block;
+    }
+
+/* Odkazy "More" v archivu */
+.archive-link a {
+    color: #000000;
+    font-size: 1.05rem;
+    text-decoration: underline;
+}
+
+    .archive-link a:hover {
+        text-decoration: none;
+    }
+
+/* --- SEKCE CV A EMAIL --- */
+.cv-row {
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.cv-link {
+    color: #000000;
+    font-size: 1.2rem;
+    text-decoration: underline;
+    font-weight: normal;
+}
+
+    .cv-link:hover {
+        text-decoration: underline;
+    }
+
+.email-text {
+    color: #000000;
+    font-size: 1.2rem;
+    cursor: text;
+}
+
+/* --- RESPONSIVITA (Slouèená mobilní verze pro celý web) --- */
+@media (max-width: 768px) {
+    body {
+        padding: 15px;
+    }
+
+    .header-nav {
+        position: static;
+        text-align: right;
+        margin-bottom: 20px;
+    }
+
+    /* Na mobilu se všechny sloupce roztáhnou na 100% šíøky pod sebe */
+    .col-3, .col-6, .col-9 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .bio-text {
+        font-size: 1.25rem !important;
+    }
+
+    .description h1 {
+        font-size: 1.25rem;
+    }
+
+    .archive-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding-bottom: 10px;
+    }
+
+    .archive-pics {
+        margin: 5px 0;
+    }
+}
