@@ -29,27 +29,32 @@ body {
 }
 
 /* Fixn� navigace "Back to Top" � v prav�m doln�m rohu */
-.header-nav {
+.back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 100;
-}
-.back-to-top {
-    position: fixed;     /* Fixuje prvek vůči oknu prohlížeče */
-    bottom: 20px;        /* Vzdálenost od spodního okraje */
-    right: 20px;         /* Vzdálenost od pravého okraje */
-    background-color: #000; /* Barva pozadí (uprav si podle designu) */
-    color: #fff;         /* Barva textu */
-    padding: 10px 15px;  /* Vnitřní okraj, aby to vypadalo jako tlačítko */
-    text-decoration: none;
-    border-radius: 5px;  /* Jemné zaoblení hran */
-    z-index: 1000;       /* Zajistí, že tlačítko bude navrchu nad obrázky a textem */
+    z-index: 1000;
+    
+    /* Vizuální styl podle bio tlačítek */
+    background-color: #ffffff;      /* Bílé pozadí (nebo transparent) */
+    color: #000000;                 /* Černý text */
+    border: 1px solid #000000;      /* Tenký černý rámeček */
+    padding: 6px 18px;              /* Vnitřní prostor kolem textu */
+    border-radius: 50px;            /* Perfektně oválný tvar */
+    
+    /* Typografie a čistota */
     font-size: 14px;
+    font-family: sans-serif;         /* Případně změň podle tvého fontu */
+    text-decoration: none;          /* Odstraní podtržení textu */
+    display: inline-block;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
+/* Jemný efekt při najetí myší na desktopu */
 .back-to-top:hover {
-    background-color: #333; /* Efekt při najetí myší na desktopu */
+    background-color: #000000;
+    color: #ffffff;
+}
 }
     /* Fixn� navigace � v�choz� pozice je v prav�m doln�m rohu (pro Back to Top) */
 .header-nav {
