@@ -1,4 +1,4 @@
-/* Globální reset */
+/* Globï¿½lnï¿½ reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +6,13 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Plynulı posun na kliknutí "Back to top" */
+    scroll-behavior: smooth; /* Plynulï¿½ posun na kliknutï¿½ "Back to top" */
 }
 
 body {
     background-color: #efefef;
     color: #000000;
-    /* Postupná hierarchie fontù s prioritou pro Helveticu */
+    /* Postupnï¿½ hierarchie fontï¿½ s prioritou pro Helveticu */
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.25;
@@ -21,14 +21,37 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Obalovı prvek */
+/* Obalovï¿½ prvek */
 .wrapper {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
 }
 
-/* Fixní navigace "Back to Top" — v pravém dolním rohu */
+/* Fixnï¿½ navigace "Back to Top" ï¿½ v pravï¿½m dolnï¿½m rohu */
+.header-nav {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+}
+.back-to-top {
+    position: fixed;     /* Fixuje prvek vÅ¯Äi oknu prohlÃ­Å¾eÄe */
+    bottom: 20px;        /* VzdÃ¡lenost od spodnÃ­ho okraje */
+    right: 20px;         /* VzdÃ¡lenost od pravÃ©ho okraje */
+    background-color: #000; /* Barva pozadÃ­ (uprav si podle designu) */
+    color: #fff;         /* Barva textu */
+    padding: 10px 15px;  /* VnitÅ™nÃ­ okraj, aby to vypadalo jako tlaÄÃ­tko */
+    text-decoration: none;
+    border-radius: 5px;  /* JemnÃ© zaoblenÃ­ hran */
+    z-index: 1000;       /* ZajistÃ­, Å¾e tlaÄÃ­tko bude navrchu nad obrÃ¡zky a textem */
+    font-size: 14px;
+}
+
+.back-to-top:hover {
+    background-color: #333; /* Efekt pÅ™i najetÃ­ myÅ¡Ã­ na desktopu */
+}
+    /* Fixnï¿½ navigace ï¿½ vï¿½chozï¿½ pozice je v pravï¿½m dolnï¿½m rohu (pro Back to Top) */
 .header-nav {
     position: fixed;
     bottom: 20px;
@@ -36,21 +59,13 @@ body {
     z-index: 100;
 }
 
-    /* Fixní navigace — vıchozí pozice je v pravém dolním rohu (pro Back to Top) */
-.header-nav {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 100;
-}
-
-/* SPECIÁLNÍ TØÍDA PRO HOME — posune ho do pravého horního rohu */
+/* SPECIï¿½LNï¿½ Tï¿½ï¿½DA PRO HOME ï¿½ posune ho do pravï¿½ho hornï¿½ho rohu */
 .header-nav.nav-top {
     bottom: auto;
     top: 20px;
 }
 
-    /* Všechny vlastnosti tlaèítek a hover efekt zùstávají spoleèné */
+    /* Vï¿½echny vlastnosti tlaï¿½ï¿½tek a hover efekt zï¿½stï¿½vajï¿½ spoleï¿½nï¿½ */
     .header-nav a {
         display: inline-flex;
         align-items: center;
@@ -72,14 +87,14 @@ body {
             text-decoration: none;
         }
 
-/* Èerná dìlící èára mezi projekty */
+/* ï¿½ernï¿½ dï¿½lï¿½cï¿½ ï¿½ï¿½ra mezi projekty */
 .grid-line {
     border: none;
     border-top: 1px solid #000000;
     margin: 15px 0;
 }
 
-/* Møíkovı systém (Grid / Flexbox) */
+/* Mï¿½ï¿½kovï¿½ systï¿½m (Grid / Flexbox) */
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -87,14 +102,14 @@ body {
     margin-right: -10px;
 }
 
-/* Spoleènı základ pro sloupce */
+/* Spoleï¿½nï¿½ zï¿½klad pro sloupce */
 .col-3, .col-6, .col-9 {
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 20px;
 }
 
-/* Šíøky sloupcù (Základ pro desktop) */
+/* ï¿½ï¿½ï¿½ky sloupcï¿½ (Zï¿½klad pro desktop) */
 .col-3 {
     flex: 0 0 25%;
     max-width: 25%;
@@ -110,7 +125,7 @@ body {
     max-width: 75%;
 }
 
-/* Úvodní BIO sekce */
+/* ï¿½vodnï¿½ BIO sekce */
 .bio-row {
     padding-top: 20px;
     margin-bottom: 40px;
@@ -122,7 +137,7 @@ body {
     margin-bottom: 25px;
 }
 
-/* Stylování oválnıch odkazù v BIO sekci */
+/* Stylovï¿½nï¿½ ovï¿½lnï¿½ch odkazï¿½ v BIO sekci */
 .bio-links {
     display: flex;
     align-items: center;
@@ -136,7 +151,7 @@ body {
         justify-content: center;
         padding: 8px 22px;
         border: 1px solid #000000;
-        border-radius: 50%; /* Vytvoøí elipsu */
+        border-radius: 50%; /* Vytvoï¿½ï¿½ elipsu */
         color: #000000;
         text-decoration: none;
         font-size: 1.2rem;
@@ -155,7 +170,7 @@ body {
     margin-left: 10px;
 }
 
-/* Stylování textù v popiscích projektù */
+/* Stylovï¿½nï¿½ textï¿½ v popiscï¿½ch projektï¿½ */
 .description h1 {
     font-size: 1.4rem;
     font-weight: normal;
@@ -176,74 +191,74 @@ body {
     font-size: 1rem !important;
 }
 
-/* Speciální tøída pro patkové kurzivní písmo */
+/* Speciï¿½lnï¿½ tï¿½ï¿½da pro patkovï¿½ kurzivnï¿½ pï¿½smo */
 .serif-italic {
     font-family: Georgia, serif;
     font-style: italic;
 }
 
-/* Odkazy uvnitø velkıch projektù */
+/* Odkazy uvnitï¿½ velkï¿½ch projektï¿½ */
 .project-link {
     color: #000000;
     font-size: 1.1rem;
 }
 
-/* DYNAMICKÉ OBRÁZKY (UZAMÈENÉ PROPORCE PODLE NÁKRESU) */
+/* DYNAMICKï¿½ OBRï¿½ZKY (UZAMï¿½ENï¿½ PROPORCE PODLE Nï¿½KRESU) */
 .pics img {
     width: 100%;
-    height: auto; /* Vıška se dopoèítává dynamicky dle pomìru stran */
-    object-fit: cover; /* Èistı oøez bez deformace */
+    height: auto; /* Vï¿½ï¿½ka se dopoï¿½ï¿½tï¿½vï¿½ dynamicky dle pomï¿½ru stran */
+    object-fit: cover; /* ï¿½istï¿½ oï¿½ez bez deformace */
     display: block;
 }
 
-/* Proporce pro 3 fotky vedle sebe (nebo uší fotku u verze se 2 fotkami) */
+/* Proporce pro 3 fotky vedle sebe (nebo uï¿½ï¿½ï¿½ fotku u verze se 2 fotkami) */
 .col-3.pics img {
     aspect-ratio: 938 / 1080;
 }
 
-/* Proporce pro širší fotku u verze se 2 fotkami */
+/* Proporce pro ï¿½irï¿½ï¿½ fotku u verze se 2 fotkami */
 .col-6.pics img {
     aspect-ratio: 1912 / 1080;
 }
 
-/* Proporce pro 1 obøí panoramatickou fotku */
+/* Proporce pro 1 obï¿½ï¿½ panoramatickou fotku */
 .col-9.pics img {
     aspect-ratio: 2894 / 1080;
 }
 
-/* --- ARCHIVNÍ SEKCE (KOMPAKTNÍ SEZNAM) --- */
+/* --- ARCHIVNï¿½ SEKCE (KOMPAKTNï¿½ SEZNAM) --- */
 
-/* Øádek v archivu */
+/* ï¿½ï¿½dek v archivu */
 .archive-row {
     align-items: center;
     margin-bottom: 0;
 }
 
-/* Název projektu v archivu */
+/* Nï¿½zev projektu v archivu */
 .archive-meta h2 {
     font-size: 1.15rem;
     font-weight: normal;
     margin-bottom: 2px;
 }
 
-/* Popisky pod názvem v archivu */
+/* Popisky pod nï¿½zvem v archivu */
 .archive-meta .project-meta {
     font-size: 1rem;
     color: #000000;
 }
 
-/* Kontejner pro malé miniatury */
+/* Kontejner pro malï¿½ miniatury */
 .archive-pics {
     display: flex;
     gap: 8px;
     align-items: center;
 }
 
-    /* Sjednocení velikosti pro miniatury v archivu */
+    /* Sjednocenï¿½ velikosti pro miniatury v archivu */
     .archive-pics img {
-        width: 80px; /* Fixní šíøka */
-        height: 55px; /* Fixní vıška */
-        object-fit: cover; /* Oøíznutí bez roztaení */
+        width: 80px; /* Fixnï¿½ ï¿½ï¿½ï¿½ka */
+        height: 55px; /* Fixnï¿½ vï¿½ï¿½ka */
+        object-fit: cover; /* Oï¿½ï¿½znutï¿½ bez roztaï¿½enï¿½ */
         display: block;
     }
 
@@ -281,7 +296,7 @@ body {
     cursor: text;
 }
 
-/* --- RESPONSIVITA (Slouèená mobilní verze pro celı web) --- */
+/* --- RESPONSIVITA (Slouï¿½enï¿½ mobilnï¿½ verze pro celï¿½ web) --- */
 @media (max-width: 768px) {
     body {
         padding: 15px;
@@ -293,7 +308,7 @@ body {
         margin-bottom: 20px;
     }
 
-    /* Na mobilu se všechny sloupce roztáhnou na 100% šíøky pod sebe */
+    /* Na mobilu se vï¿½echny sloupce roztï¿½hnou na 100% ï¿½ï¿½ï¿½ky pod sebe */
     .col-3, .col-6, .col-9 {
         flex: 0 0 100%;
         max-width: 100%;
