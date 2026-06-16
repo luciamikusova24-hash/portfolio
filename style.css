@@ -1,4 +1,4 @@
-/* Glob�ln� reset */
+/* Globální reset */
 * {
     margin: 0;
     padding: 0;
@@ -6,13 +6,13 @@
 }
 
 html {
-    scroll-behavior: smooth; /* Plynul� posun na kliknut� "Back to top" */
+    scroll-behavior: smooth; /* Plynulý posun na kliknutí "Back to top" */
 }
 
 body {
     background-color: #efefef;
     color: #000000;
-    /* Postupn� hierarchie font� s prioritou pro Helveticu */
+    /* Postupná hierarchie fontů s prioritou pro Helveticu */
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     line-height: 1.25;
@@ -21,85 +21,49 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-/* Obalov� prvek */
+/* Obalový prvek */
 .wrapper {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
 }
 
-/* Fixn� navigace "Back to Top" � v prav�m doln�m rohu */
+/* Fixní navigace "Back to Top" v pravém dolním rohu – přesný design bio tlačítek */
 .back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
     z-index: 1000;
-    
-    /* Vizuální styl podle bio tlačítek */
-    background-color: #ffffff;      /* Bílé pozadí (nebo transparent) */
-    color: #000000;                 /* Černý text */
-    border: 1px solid #000000;      /* Tenký černý rámeček */
-    padding: 6px 18px;              /* Vnitřní prostor kolem textu */
-    border-radius: 50px;            /* Perfektně oválný tvar */
-    
-    /* Typografie a čistota */
-    font-size: 14px;
-    font-family: sans-serif;         /* Případně změň podle tvého fontu */
-    text-decoration: none;          /* Odstraní podtržení textu */
-    display: inline-block;
-    transition: background-color 0.2s ease, color 0.2s ease;
+
+    /* Přesný design podle .bio-links a */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 22px;
+    border: 1px solid #000000;
+    border-radius: 50%; /* Vytvoří totožnou elipsu */
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    background-color: #efefef; /* Sjednocené šedé pozadí webu */
+    transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-/* Jemný efekt při najetí myší na desktopu */
+/* Přesný hover efekt podle .bio-links a:hover */
 .back-to-top:hover {
     background-color: #000000;
     color: #ffffff;
 }
-}
-    /* Fixn� navigace � v�choz� pozice je v prav�m doln�m rohu (pro Back to Top) */
-.header-nav {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 100;
-}
 
-/* SPECI�LN� T��DA PRO HOME � posune ho do prav�ho horn�ho rohu */
-.header-nav.nav-top {
-    bottom: auto;
-    top: 20px;
-}
-
-    /* V�echny vlastnosti tla��tek a hover efekt z�st�vaj� spole�n� */
-    .header-nav a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 8px 22px;
-        border: 1px solid #000000;
-        border-radius: 50%;
-        color: #000000;
-        text-decoration: none;
-        font-size: 1.2rem;
-        white-space: nowrap;
-        background-color: #efefef;
-        transition: background-color 0.15s ease, color 0.15s ease;
-    }
-
-        .header-nav a:hover {
-            background-color: #000000;
-            color: #ffffff;
-            text-decoration: none;
-        }
-
-/* �ern� d�l�c� ��ra mezi projekty */
+/* Černá dělící čára mezi projekty */
 .grid-line {
     border: none;
     border-top: 1px solid #000000;
     margin: 15px 0;
 }
 
-/* M��kov� syst�m (Grid / Flexbox) */
+/* Mřížkový systém (Grid / Flexbox) */
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -107,14 +71,14 @@ body {
     margin-right: -10px;
 }
 
-/* Spole�n� z�klad pro sloupce */
+/* Společný základ pro sloupce */
 .col-3, .col-6, .col-9 {
     padding-left: 10px;
     padding-right: 10px;
     margin-bottom: 20px;
 }
 
-/* ���ky sloupc� (Z�klad pro desktop) */
+/* Šířky sloupců (Základ pro desktop) */
 .col-3 {
     flex: 0 0 25%;
     max-width: 25%;
@@ -130,7 +94,7 @@ body {
     max-width: 75%;
 }
 
-/* �vodn� BIO sekce */
+/* Úvodní BIO sekce */
 .bio-row {
     padding-top: 20px;
     margin-bottom: 40px;
@@ -142,7 +106,7 @@ body {
     margin-bottom: 25px;
 }
 
-/* Stylov�n� ov�ln�ch odkaz� v BIO sekci */
+/* Stylování oválných odkazů v BIO sekci */
 .bio-links {
     display: flex;
     align-items: center;
@@ -150,24 +114,24 @@ body {
     flex-wrap: wrap;
 }
 
-    .bio-links a {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        padding: 8px 22px;
-        border: 1px solid #000000;
-        border-radius: 50%; /* Vytvo�� elipsu */
-        color: #000000;
-        text-decoration: none;
-        font-size: 1.2rem;
-        white-space: nowrap;
-        transition: background-color 0.15s ease, color 0.15s ease;
-    }
+.bio-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 22px;
+    border: 1px solid #000000;
+    border-radius: 50%; /* Vytvoří elipsu */
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.2rem;
+    white-space: nowrap;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
 
-        .bio-links a:hover {
-            background-color: #000000;
-            color: #ffffff;
-        }
+.bio-links a:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
 
 .inline-gif {
     height: 35px;
@@ -175,7 +139,7 @@ body {
     margin-left: 10px;
 }
 
-/* Stylov�n� text� v popisc�ch projekt� */
+/* Stylování textů v popiscích projektů */
 .description h1 {
     font-size: 1.4rem;
     font-weight: normal;
@@ -196,76 +160,76 @@ body {
     font-size: 1rem !important;
 }
 
-/* Speci�ln� t��da pro patkov� kurzivn� p�smo */
+/* Speciální třída pro patkové kurzivní písmo */
 .serif-italic {
     font-family: Georgia, serif;
     font-style: italic;
 }
 
-/* Odkazy uvnit� velk�ch projekt� */
+/* Odkazy uvnitř velkých projektů */
 .project-link {
     color: #000000;
     font-size: 1.1rem;
 }
 
-/* DYNAMICK� OBR�ZKY (UZAM�EN� PROPORCE PODLE N�KRESU) */
+/* DYNAMICKÉ OBRÁZKY (UZAMČENÉ PROPORCE PODLE NÁKRESU) */
 .pics img {
     width: 100%;
-    height: auto; /* V��ka se dopo��t�v� dynamicky dle pom�ru stran */
-    object-fit: cover; /* �ist� o�ez bez deformace */
+    height: auto; /* Výška se dopočítává dynamicky dle poměru stran */
+    object-fit: cover; /* Čistý ořez bez deformace */
     display: block;
 }
 
-/* Proporce pro 3 fotky vedle sebe (nebo u��� fotku u verze se 2 fotkami) */
+/* Proporce pro 3 fotky vedle sebe (nebo užší fotku u verze se 2 fotkami) */
 .col-3.pics img {
     aspect-ratio: 938 / 1080;
 }
 
-/* Proporce pro �ir�� fotku u verze se 2 fotkami */
+/* Proporce pro širší fotku u verze se 2 fotkami */
 .col-6.pics img {
     aspect-ratio: 1912 / 1080;
 }
 
-/* Proporce pro 1 ob�� panoramatickou fotku */
+/* Proporce pro 1 obří panoramatickou fotku */
 .col-9.pics img {
     aspect-ratio: 2894 / 1080;
 }
 
-/* --- ARCHIVN� SEKCE (KOMPAKTN� SEZNAM) --- */
+/* --- ARCHIVNÍ SEKCE (KOMPAKTNÍ SEZNAM) --- */
 
-/* ��dek v archivu */
+/* Řádek v archivu */
 .archive-row {
     align-items: center;
     margin-bottom: 0;
 }
 
-/* N�zev projektu v archivu */
+/* Název projektu v archivu */
 .archive-meta h2 {
     font-size: 1.15rem;
     font-weight: normal;
     margin-bottom: 2px;
 }
 
-/* Popisky pod n�zvem v archivu */
+/* Popisky pod názvem v archivu */
 .archive-meta .project-meta {
     font-size: 1rem;
     color: #000000;
 }
 
-/* Kontejner pro mal� miniatury */
+/* Kontejner pro malé miniatury */
 .archive-pics {
     display: flex;
     gap: 8px;
     align-items: center;
 }
 
-    /* Sjednocen� velikosti pro miniatury v archivu */
-    .archive-pics img {
-        width: 80px; /* Fixn� ���ka */
-        height: 55px; /* Fixn� v��ka */
-        object-fit: cover; /* O��znut� bez rozta�en� */
-        display: block;
-    }
+/* Sjednocení velikosti pro miniatury v archivu */
+.archive-pics img {
+    width: 80px; /* Fixní šířka */
+    height: 55px; /* Fixní výška */
+    object-fit: cover; /* Oříznutí bez roztažení */
+    display: block;
+}
 
 /* Odkazy "More" v archivu */
 .archive-link a {
@@ -274,9 +238,9 @@ body {
     text-decoration: underline;
 }
 
-    .archive-link a:hover {
-        text-decoration: none;
-    }
+.archive-link a:hover {
+    text-decoration: none;
+}
 
 /* --- SEKCE CV A EMAIL --- */
 .cv-row {
@@ -291,9 +255,9 @@ body {
     font-weight: normal;
 }
 
-    .cv-link:hover {
-        text-decoration: underline;
-    }
+.cv-link:hover {
+    text-decoration: underline;
+}
 
 .email-text {
     color: #000000;
@@ -301,19 +265,22 @@ body {
     cursor: text;
 }
 
-/* --- RESPONSIVITA (Slou�en� mobiln� verze pro cel� web) --- */
+
+/* --- RESPONSIVITA (Sloučení mobilní verze pro celý web) --- */
 @media (max-width: 768px) {
     body {
         padding: 15px;
     }
 
-    .header-nav {
-        position: static;
-        text-align: right;
-        margin-bottom: 20px;
+    /* KONTROLNÍ POJISTKA PRO TLAČÍTKO DOLE */
+    .back-to-top {
+        position: fixed !important;
+        bottom: 20px !important;
+        top: auto !important;
+        right: 20px !important;
     }
 
-    /* Na mobilu se v�echny sloupce rozt�hnou na 100% ���ky pod sebe */
+    /* Na mobilu se všechny sloupce roztáhnou na 100% šířky pod sebe */
     .col-3, .col-6, .col-9 {
         flex: 0 0 100%;
         max-width: 100%;
