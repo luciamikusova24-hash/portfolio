@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Narkokapitalismus — Detail Projektu</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        /* MATEMATICKY PŘESNÉ ZAROVNÁNÍ S ODSTAVCEM */
+        .subpage-pics {
+            padding-top: 155px !important; /* Aktualizováno na 155px pro dokonalé lícování */
+        }
+
+        /* Na mobilech padá vše pod sebe, takže horní mezeru u fotek zrušíme */
+        @media (max-width: 800px) {
+            .subpage-pics {
+                padding-top: 10px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HOME TLAČÍTKO: Bezpečně vpravo nahoře bez levitace přes text -->
+    <div style="display: flex; justify-content: flex-end; padding: 20px 20px 0 0; clear: both;">
+        <a href="index.html" class="back-to-top" style="position: static !important; float: none !important;">Home</a>
+    </div>
+
+    <div class="wrapper" id="top" style="padding-top: 20px;">
+
+        <div class="row" style="align-items: flex-start;">
+
+            <div class="col-3 description" style="padding-top: 20px; padding-right: 25px;">
+                <h1 style="font-size: 2rem; margin-bottom: 15px; font-weight: normal;">Narkokapitalismus</h1>
+
+                <p class="project-meta" style="font-size: 1.1rem; margin-bottom: 30px; color: #000000;">
+                    concept of book design, 2023
+                </p>
+
+                <p class="project-status" style="font-size: 1.1rem; line-height: 1.4; color: #000000;">
+                    Book typesetting, layout, and selection of typography and color scheme.
+                    The visual concept is based on the aesthetics of medical prescriptions: blue text, a simple structure, 
+                    and a cool, detached tone. The cover is minimalist, featuring a hand written text, that resembles doctor’s often unreadable handwriting. 
+                    The same visual system works inside of the book with blue text and handwritten chapters. 
+                </p>
+            </div>
+
+            <div class="col-9 pics subpage-pics">
+                <img src="Media/narkokapitalismus_01.png" alt="Proplétání - Detail 1" style="aspect-ratio: 2894 / 2160; object-fit: cover; margin-bottom: 30px; width: 100%; height: auto;" />
+                <img src="Media/narkokapitalismus_05.png" alt="Proplétání - Detail 2" style="aspect-ratio: 2894 / 2160; object-fit: cover; margin-bottom: 30px; width: 100%; height: auto;" />
+                <img src="Media/narkokapitalismus_03.png" alt="Proplétání - Detail 3" style="aspect-ratio: 2894 / 2160; object-fit: cover; margin-bottom: 30px; width: 100%; height: auto;" />
+                <img src="Media/narkokapitalismus_04.png" alt="Proplétání - Detail 3" style="aspect-ratio: 2894 / 2160; object-fit: cover; margin-bottom: 30px; width: 100%; height: auto;" />
+                <img src="Media/narkokapitalismus_02.png" alt="Proplétání - Detail 3" style="aspect-ratio: 2894 / 2160; object-fit: cover; margin-bottom: 30px; width: 100%; height: auto;" />
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- BACK TO TOP TLAČÍTKO: Bezpečně až pod fotkami vpravo dole bez levitace -->
+    <div style="display: flex; justify-content: flex-end; padding: 40px 20px 20px 0; clear: both;">
+        <a href="#top" class="back-to-top" style="position: static !important; float: none !important;">Back to Top</a>
+    </div>
+
+</body>
+</html>
