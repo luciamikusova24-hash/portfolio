@@ -1,0 +1,130 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucia Mikušová — CV</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* NASTAVENÍ PROSTORU PRO SLOUPCE PŘESNĚ PODLE OBRÁZKU */
+        .col-left-cv {
+            flex: 0 0 42% !important;
+            max-width: 42% !important;
+            padding-top: 20px;
+            padding-right: 25px;
+            text-align: left;
+        }
+
+        .col-right-cv {
+            flex: 0 0 58% !important;
+            max-width: 58% !important;
+            padding-top: 155px !important; /* Přesný vertikální odskok textu dolů */
+            text-align: left;
+        }
+
+        /* ŘÁDEK PRO ODKAZY - drží je striktně v jedné lince vedle sebe */
+        .bio-links-inline {
+            display: flex !important;
+            gap: 10px !important;
+            flex-wrap: nowrap !important; 
+            margin-top: 25px;
+        }
+
+        /* RESPONSIVITA PRO MOBILY */
+        @media (max-width: 800px) {
+            .col-left-cv, .col-right-cv {
+                flex: 0 0 100% !important;
+                max-width: 100% !important;
+            }
+            .col-right-cv {
+                padding-top: 40px !important;
+            }
+            .bio-links-inline {
+                flex-wrap: wrap !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TLAČÍTKO HOME -->
+    <div style="display: flex; justify-content: flex-end; padding: 20px 20px 0 20px; clear: both;">
+        <a href="index.html" class="back-to-top" style="position: static !important;">Home</a>
+    </div>
+
+    <!-- WRAPPER -->
+    <div class="wrapper" id="top" style="padding-top: 20px;">
+        <div class="row" style="align-items: flex-start; display: flex; width: 100%;">
+
+            <!-- LEVÝ PANEL (Jméno a bio převzato z indexu pro stejnou velikost) -->
+            <div class="col-left-cv">
+                
+                <!-- Použití původní třídy z indexu pro identické zvětšení jména a popisku -->
+                <p class="bio-text" style="color: #000000;">
+                    Lucia Mikušová 
+                    <br />
+                    visual designer, currently based in Ostrava
+                </p>
+
+                <p style="font-size: 1.1rem; margin-top: 25px; margin-bottom: 0; color: #000000; line-height: 1.4;">
+                    email for full portfolio digitalfairy.jpg@gmail.com
+                </p>
+
+                <!-- Tlačítka seřazená v jedné lince -->
+                <div class="bio-links-inline bio-links">
+                    <a target="_blank" href="https://www.instagram.com/digitalfairy.jpg/?hl=en">Instagram</a>
+                    <a target="_blank" href="https://www.are.na/lucia-mikusova/channels">Are.na</a>
+                    <a href="https://digitalfairyjpg.gumroad.com/">Gumroad</a>
+                </div>
+            </div>
+
+            <!-- PRAVÝ PANEL (Obsah CV) -->
+            <div class="col-right-cv">
+
+                <div style="margin-bottom: 40px;">
+                    <h2 style="font-size: 1.1rem; margin-bottom: 15px; font-weight: normal; color: #000000;">Education</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.4; color: #000000;">
+                        2024–2026 University of Ostrava, Faculty of fine arts and music, department of graphics and drawing, 
+                        <br />
+                        Graphic design and visual communication studio (MgA.)
+                        <br /><br />
+                        2025 Exchange semester at Art Academy of Latvia, Department of Visual Comunication
+                        <br /><br />
+                        2021–2024 University of Ostrava, Faculty of fine arts and music, department of graphics and drawing, 
+                        <br />
+                        Graphic design and visual communication studio (BcA.)
+                        <br /><br />
+                        2017–2021 Střední škola průmyslová a umělecká, Hodonín
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 40px;">
+                    <h2 style="font-size: 1.1rem; margin-bottom: 15px; font-weight: normal; color: #000000;">Experience</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.4; color: #000000;">
+                        2023–2025 Wink&Nod, digital agency, Senica, SK
+                        <br />
+                        Graphic designer, branding/ socials/ print
+                        <br /><br />
+                        2023 Upvision, marketing agency, Senica, SK 
+                        <br />
+                        Graphic designer, branding/ socials/ print
+                    </p>
+                </div>
+
+                <div style="margin-bottom: 40px;">
+                    <h2 style="font-size: 1.1rem; margin-bottom: 15px; font-weight: normal; color: #000000;">Exhibitions</h2>
+                    <p style="font-size: 1.1rem; line-height: 1.4; color: #000000;">
+                        2025 Group exhibition “Piedāvāju izstādi”, gallery Smilga, Riga, LV
+                        <br />
+                        2024 Group exhibition “bcA. miscellanea”, gallery GAFU, Ostrava, CZ
+                    </p>
+                </div>
+
+            </div> <!-- /col-right-cv -->
+        </div> <!-- /row -->
+    </div> <!-- /wrapper -->
+
+</body>
+</html>
